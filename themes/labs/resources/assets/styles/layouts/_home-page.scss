@@ -1,0 +1,323 @@
+.wrapper--features {
+  @apply grid;
+
+  grid-template-columns: 70% 30%;
+}
+
+.feature {
+  @apply bg-blue text-white p-24;
+
+  .links {
+    @apply flex flex-row pt-8 pb-8 pl-0;
+
+    li {
+      list-style-type: none;
+
+      @apply mr-8;
+
+      // @screen lg {
+      //   @apply mb-8 mt-8;
+      // }
+
+      a {
+        @apply text-white;
+      }
+
+      h2 {
+        @apply mt-8 mb-8;
+      }
+
+      h3 {
+        display: inline;
+        border-bottom: 1px solid white;
+
+        @apply pb-2 pt-2;
+      }
+    }
+  }
+}
+
+.processes {
+  @apply grid grid-columns-1 pl-4 pr-4 mt-12;
+
+  list-style-type: none;
+  justify-items: center;
+
+  @screen lg {
+    @apply flex flex-wrap justify-center;
+  }
+
+  .process {
+    @apply flex flex-row mb-10 w-5/6;
+
+    @screen lg {
+      @apply w-1/3 mr-2;
+    }
+
+    .process__image {
+      position: relative;
+
+      @apply flex flex-none pr-2 pl-2 self-center;
+
+      img {
+        z-index: 1;
+
+        @apply w-4/5;
+
+        // @screen lg {
+        //   @apply w-1/4;
+        // }
+      }
+    }
+
+    .process__text {
+      @apply flex flex-col self-center;
+
+      h5 {
+        @apply mb-4;
+      }
+    }
+
+    .process__image::before {
+      content: "";
+      position: absolute;
+      top: -1rem;
+      left: -1rem;
+      z-index: -1;
+      width: 5.5rem;
+      height: 5.5rem;
+
+      @apply bg-blue-light rounded-full;
+    }
+  }
+
+  .process:nth-child(even) {
+    .process__image {
+      order: 2;
+
+      @screen lg {
+        order: inherit;
+      }
+    }
+
+    .process__text {
+      @apply pl-2;
+    }
+  }
+}
+
+.projects {
+  @apply flex flex-col pl-0;
+
+  list-style-type: none;
+
+  .project {
+    @apply pl-24 pb-4 pr-24;
+
+    &.active {
+      @apply bg-blue text-white pt-0;
+
+      h4 {
+        @apply text-blue-light;
+      }
+
+      a {
+        svg {
+          @apply text-grey-light fill-current;
+        }
+      }
+    }
+
+    &:not(.active) {
+      @apply pt-4 border-blue border-t-2 border-b-2 text-black;
+
+      a {
+        svg {
+          @apply text-black fill-current;
+        }
+      }
+    }
+
+    .project__active {
+      text-align: right;
+    }
+
+    .project__info {
+      @apply grid pt-8 pb-8;
+
+      grid-template-columns: 25% 66% 10%;
+
+      h4 {
+        @apply self-center;
+      }
+
+      @screen lg {
+        @apply justify-around;
+      }
+
+      a {
+        @apply text-right;
+      }
+    }
+
+    .info__category {
+      @apply flex flex-row self-center pt-2 pb-2;
+
+      img {
+        @apply self-center mr-2 w-1/2;
+
+        @screen lg {
+          @apply w-1/4;
+        }
+      }
+
+      h4 {
+        display: none;
+
+        @screen lg {
+          display: inline-block;
+        }
+      }
+    }
+
+    .info__title {
+      @apply flex self-center;
+
+      h3 {
+        @screen lg {
+          @apply w-4/5 ml-10 mr-10 pl-10;
+        }
+      }
+    }
+  }
+}
+
+.wrapper--team {
+  .team {
+    @apply grid grid-columns-1 grid-gap-1 pl-0;
+
+    list-style-type: none;
+
+    @screen lg {
+      @apply grid-columns-4;
+
+      justify-items: stretch;
+    }
+
+    .team-member {
+      .team-member__img {
+        @apply bg-blue relative;
+
+        img {
+          @apply opacity-25 h-64;
+        }
+
+        h4.underline {
+          @apply text-white absolute;
+
+          right: 10px;
+          top: 10px;
+        }
+      }
+    }
+  }
+}
+
+.wrapper--products-sl {
+  @apply pl-6 pr-6;
+
+  @screen lg {
+    @apply pl-18 pr-24;
+  }
+
+  .products-sl__heading {
+    @apply mb-2 text-right;
+  }
+
+  .controls {
+    @apply self-end text-right mt-4;
+
+    .prev,
+    .nxt {
+      @apply w-2/3;
+    }
+
+    .rotate {
+      transform: rotate(180deg);
+    }
+  }
+
+  .slider-products {
+    .product {
+      .product__bordered {
+        @apply border-t-2 border-b-2 border-blue pt-6 pb-6;
+
+        min-height: 25vh;
+      }
+
+      .product__img {
+        display: inline-flex;
+        vertical-align: top;
+
+        @apply w-1/3 mr-8;
+      }
+
+      .product__info {
+        display: inline-block;
+
+        @apply w-1/2;
+
+        h5 {
+          @apply mb-4;
+        }
+      }
+    }
+  }
+}
+
+.wrapper--feature-slider {
+  @apply flex flex-col self-end -ml-28;
+
+  .underline {
+    @apply text-right w-5/6 mb-2;
+  }
+
+  button[data-action="stop"],
+  button[data-action="start"] {
+    display: none;
+  }
+
+  .tns-outer {
+    @apply border-blue border-2 bg-white w-5/6;
+  }
+
+  .slider-projects {
+    list-style-type: none;
+
+    @apply pl-0;
+
+    .project-sl {
+      @apply pl-12 pr-8 pt-12 pb-12;
+
+      .info__category {
+        @apply flex flex-row self-center pb-6;
+
+        .info__img {
+          @apply self-center mr-2;
+
+          @screen lg {
+            width: 10%;
+          }
+        }
+
+        h4 {
+          @apply self-center;
+        }
+      }
+    }
+  }
+
+  .nav {
+    @apply w-5/6 text-right;
+  }
+}
