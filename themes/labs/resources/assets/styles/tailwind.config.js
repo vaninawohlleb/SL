@@ -9,6 +9,7 @@ let colors = {
   'white': '#ffffff',
   'black': '#000000',
   'blue-light': '#BEDDFF',
+  'yellow': '#FEFF39',
 }
 
 module.exports = {
@@ -123,6 +124,7 @@ module.exports = {
   borderWidths: {
     default: "1px",
     0: "0",
+    1: "1px",
     2: "2px",
     4: "4px",
     8: "8px",
@@ -491,6 +493,7 @@ module.exports = {
       grids: [1, 2, 3, 4, 5, 6, 8, 10, 12],
       gaps: {
         0: "0",
+        9: "0.15rem",
         1: "0.25rem",
         2: "0.5rem",
         4: "1rem",

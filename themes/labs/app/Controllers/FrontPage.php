@@ -12,4 +12,5 @@ class FrontPage extends Controller
   use Partials\RecentProjects;
   use Partials\RecentProducts;
   use Partials\TeamMembers;
+  use Partials\RecentOpportunities;
 }

@@ -24,7 +24,7 @@
       <div class="nav">
         <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
           <?php if($project->active === 'yes'): ?>
-            <span>dot</span>
+            <span class="dot">&#8226</span>
             <?php if($loop->index == 3): ?>
               <?php break; ?>
             <?php endif; ?>
@@ -53,32 +53,38 @@
     </ul>
   </div>
 
-  <div class="wrapper--products-sl">
-    <div class="products-sl__heading">
-      <h4 class="underline">Products We Built</h4>
-    </div>
-    <ul class="slider-products">
-      <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-        <?php echo $__env->make('partials.product-in-slider', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-    </ul>
-    <div class="controls">
-      <button class="prevButton">
-        <img class="rotate prev" src="<?= App\asset_path('images/dashicons_arrow-left.svg'); ?>" />
-      </button>
-      <button class="nextButton">
-        <img class="nxt" src="<?= App\asset_path('images/dashicons_arrow-left.svg'); ?>" />
-      </button>
-    </div>
-  </div>
-
-    <div class="wrapper--team">
+  <div class="wrapper--team">
+    <h4 class="underline">Our Team</h4>
     <ul class="team">
       <?php $__currentLoopData = $team; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $member): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <?php echo $__env->make('partials.member-in-list', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         <?php if($loop->index == 3): ?>
           <?php break; ?>
         <?php endif; ?>
+      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    </ul>
+  </div>
+
+  <div class="wrapper--opportunities">
+    <ul class="opportunities">
+      <?php $__currentLoopData = $opportunities; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $opportunity): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <?php echo $__env->make('partials.opportunity-in-list', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    </ul>
+    <!-- Make this dynamic -->
+    <div class="opportunities__info">
+      <h3 class="title">Join Us Today</h3>
+      <p>Reach out to info@significancelabs.org, with your resume and cover letter.<p>
+    </div>
+  </div>
+
+  <div class="wrapper--products-sl">
+    <div class="products-sl__heading">
+      <h4 class="underline">Products We Built</h4>
+    </div>
+    <ul class="products">
+      <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <?php echo $__env->make('partials.product-in-slider', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </ul>
   </div>

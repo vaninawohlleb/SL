@@ -167,6 +167,36 @@ function register_post_type_5() {
   register_post_type('feature', $args);
 }
 
+function register_post_type_6() {
+  $labels = array(
+    'name' => __('Opportunities'),
+    'singular_name' => __('Opportunity'),
+    'add_new' => __('Add New'),
+    'add_new_item' => __('Add New Opportunity'),
+    'edit_item' => __('Edit Opportunity'),
+    'new_item' => __('New Opportunity'),
+    'view_item' => __('View Opportunity'),
+    'search_items' => __('Search Opportunity'),
+    'not_found' => __('No Opportunities found'),
+    'not_found_in_trash' => __('No Opportunities Found in trash')
+  );
+
+  $args = array(
+    'labels' => $labels,
+    'has_archive' => true,
+    'public' => true,
+    'hierarchical' => false,
+    'supports' => array(
+      'title',
+      'thumbnail',
+      'revisions'
+    ),
+    'show_in_rest' => true,
+  );
+
+  register_post_type('opportunity', $args);
+}
+
 function add_taxonomies_to_custom_post_types() {
 	register_taxonomy_for_object_type( 'category', 'project' );
 	register_taxonomy_for_object_type( 'category', 'product' );
@@ -178,4 +208,5 @@ add_action('init', 'register_post_type_2');
 add_action('init', 'register_post_type_3');
 add_action('init', 'register_post_type_4');
 add_action('init', 'register_post_type_5');
+add_action('init', 'register_post_type_6');
 add_action( 'init', 'add_taxonomies_to_custom_post_types');

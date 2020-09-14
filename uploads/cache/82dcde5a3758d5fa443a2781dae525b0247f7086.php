@@ -1,7 +1,11 @@
   <li class="team-member">
     <div class="team-member__img">
       <img src="<?php echo e($member->image_url); ?>" />
-      <h4 class="underline"><?php echo e($member->title); ?></h4>
+    </div>
+    <div class="team-member__info">
+      <h6><?php echo e($member->title); ?></h6>
+      <p>Title: <?php echo e($member->business_title); ?></p>
+      <p>Email: <?php echo e($member->email); ?></p>
     </div>
   </li>
   

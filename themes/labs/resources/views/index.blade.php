@@ -26,7 +26,7 @@
       <div class="nav">
         @foreach($projects as $project)
           @if($project->active === 'yes')
-            <span>dot</span>
+            <span class="dot">&#8226</span>
             @if($loop->index == 3)
               @break
             @endif
@@ -55,32 +55,38 @@
     </ul>
   </div>
 
-  <div class="wrapper--products-sl">
-    <div class="products-sl__heading">
-      <h4 class="underline">Products We Built</h4>
-    </div>
-    <ul class="slider-products">
-      @foreach($products as $product)
-        @include('partials.product-in-slider')
-      @endforeach
-    </ul>
-    <div class="controls">
-      <button class="prevButton">
-        <img class="rotate prev" src="@asset('images/dashicons_arrow-left.svg')" />
-      </button>
-      <button class="nextButton">
-        <img class="nxt" src="@asset('images/dashicons_arrow-left.svg')" />
-      </button>
-    </div>
-  </div>
-
-    <div class="wrapper--team">
+  <div class="wrapper--team">
+    <h4 class="underline">Our Team</h4>
     <ul class="team">
       @foreach ($team as $member)
         @include('partials.member-in-list')
         @if($loop->index == 3)
           @break
         @endif
+      @endforeach
+    </ul>
+  </div>
+
+  <div class="wrapper--opportunities">
+    <ul class="opportunities">
+      @foreach($opportunities as $opportunity)
+        @include('partials.opportunity-in-list')
+      @endforeach
+    </ul>
+    <!-- Make this dynamic -->
+    <div class="opportunities__info">
+      <h3 class="title">Join Us Today</h3>
+      <p>Reach out to info@significancelabs.org, with your resume and cover letter.<p>
+    </div>
+  </div>
+
+  <div class="wrapper--products-sl">
+    <div class="products-sl__heading">
+      <h4 class="underline">Products We Built</h4>
+    </div>
+    <ul class="products">
+      @foreach($products as $product)
+        @include('partials.product-in-slider')
       @endforeach
     </ul>
   </div>

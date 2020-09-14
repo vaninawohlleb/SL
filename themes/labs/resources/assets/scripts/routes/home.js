@@ -19,16 +19,16 @@ export default {
       autoPlayText: '',
     });
 
-    tns({
-      container: '.slider-products',
-      items: 2,
-      autoplay: false,
-      loop: true,
-      mouseDrag: true,
-      arrowKeys: true,
-      gutter: '65',
-      controlsContainer: '.controls',
-      nav: false,
-    });
+    // tns({
+    //   container: '.slider-products',
+    //   items: 2,
+    //   autoplay: false,
+    //   loop: true,
+    //   mouseDrag: true,
+    //   arrowKeys: true,
+    //   gutter: '65',
+    //   controlsContainer: '.controls',
+    //   nav: false,
+    // });
   },
 };
