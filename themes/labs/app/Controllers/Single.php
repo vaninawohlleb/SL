@@ -26,6 +26,7 @@ class Single extends Controller {
     ]))->map(function ($project) {
       return (object) [
         'image_url' => get_the_post_thumbnail_url($project),
+        'inverted_image_url' => get_field('inverted_image', $project->ID)[url],
         'title' => get_the_title($project),
         'category_name' => get_the_category(get_the_ID())[0]->name,
         'url' => get_permalink($project),

@@ -1,0 +1,15 @@
+.team {
+  &.three-col {
+    @screen lg {
+      @apply grid-columns-3;
+
+      justify-items: stretch;
+    }
+
+    .team-member {
+      .team-member__bio {
+        @apply mt-2 mb-2;
+      }
+    }
+  }
+}

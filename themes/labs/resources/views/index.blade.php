@@ -4,10 +4,9 @@
   @include('partials.page-header')
 
   <div class="wrapper--features">
-    @foreach($feature as $feature)
-      @include('partials.feature')
-      @if($loop->index = 1)
-        @break
+    @foreach($features as $feature)
+      @if($feature->homepage_section === 'heading')
+        @include('partials.feature')
       @endif
     @endforeach
   
@@ -73,11 +72,11 @@
         @include('partials.opportunity-in-list')
       @endforeach
     </ul>
-    <!-- Make this dynamic -->
-    <div class="opportunities__info">
-      <h3 class="title">Join Us Today</h3>
-      <p>Reach out to info@significancelabs.org, with your resume and cover letter.<p>
-    </div>
+    @foreach($features as $feature)
+      @if($feature->homepage_section === 'opportunities')
+        @include('partials.feature')
+      @endif
+    @endforeach
   </div>
 
   <div class="wrapper--products-sl">

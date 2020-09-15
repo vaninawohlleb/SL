@@ -1,0 +1,41 @@
+.wrapper--project {
+  @apply grid pb-24;
+
+  grid-template-columns: 70% 30%;
+}
+
+.project__main {
+  @apply bg-blue text-white p-24;
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  a,
+  p {
+    max-width: 95%;
+
+    @apply pb-2;
+  }
+
+  .read-more {
+    @apply text-white;
+
+    border-bottom: 1px solid white;
+  }
+}
+
+.project--extra {
+  list-style-type: none;
+
+  @apply flex flex-col self-center -ml-28 -mt-10 bg-white pt-8 pb-8 pl-8 pr-8 border-blue border-2;
+
+  h3 {
+    @apply mb-2;
+  }
+
+  .findings {
+    @apply mt-1 mb-1;
+  }
+}

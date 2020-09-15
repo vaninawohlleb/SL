@@ -7,5 +7,10 @@
       <p>Title: {{ $member->business_title }}</p>
       <p>Email: {{ $member->email }}</p>
     </div>
+    @if(!is_home())
+      <p class="team-member__bio">
+        {!! $member->bio !!}
+      </p>
+    @endif
   </li>
   

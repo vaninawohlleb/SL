@@ -103,7 +103,7 @@ function register_post_type_3() {
     'show_in_rest' => true,
   );
 
-  register_post_type('team-member', $args);
+  register_post_type('team_member', $args);
 }
 
 function register_post_type_4() {
@@ -200,7 +200,7 @@ function register_post_type_6() {
 function add_taxonomies_to_custom_post_types() {
 	register_taxonomy_for_object_type( 'category', 'project' );
 	register_taxonomy_for_object_type( 'category', 'product' );
-  register_taxonomy_for_object_type( 'teams', 'team-member' );
+  register_taxonomy_for_object_type( 'teams', 'team_member' );
 }
 
 add_action('init', 'register_post_type_1');

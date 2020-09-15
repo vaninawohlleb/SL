@@ -2,10 +2,9 @@
   <?php echo $__env->make('partials.page-header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
   <div class="wrapper--features">
-    <?php $__currentLoopData = $feature; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $feature): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-      <?php echo $__env->make('partials.feature', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-      <?php if($loop->index = 1): ?>
-        <?php break; ?>
+    <?php $__currentLoopData = $features; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $feature): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+      <?php if($feature->homepage_section === 'heading'): ?>
+        <?php echo $__env->make('partials.feature', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
       <?php endif; ?>
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
@@ -71,11 +70,11 @@
         <?php echo $__env->make('partials.opportunity-in-list', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </ul>
-    <!-- Make this dynamic -->
-    <div class="opportunities__info">
-      <h3 class="title">Join Us Today</h3>
-      <p>Reach out to info@significancelabs.org, with your resume and cover letter.<p>
-    </div>
+    <?php $__currentLoopData = $features; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $feature): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+      <?php if($feature->homepage_section === 'opportunities'): ?>
+        <?php echo $__env->make('partials.feature', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+      <?php endif; ?>
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   </div>
 
   <div class="wrapper--products-sl">

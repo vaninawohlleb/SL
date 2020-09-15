@@ -7,6 +7,14 @@
 .feature {
   @apply bg-blue text-white p-24;
 
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    max-width: 95%;
+  }
+
   .links {
     @apply flex flex-row pt-8 pb-8 pl-0;
 
@@ -106,92 +114,6 @@
   }
 }
 
-.projects {
-  @apply flex flex-col pl-0 pb-32;
-
-  list-style-type: none;
-
-  .project {
-    @apply pl-24 pb-4 pr-24;
-
-    &.active {
-      @apply bg-blue text-white pt-0;
-
-      h4 {
-        @apply text-blue-light;
-      }
-
-      a {
-        svg {
-          @apply text-blue-light fill-current;
-        }
-      }
-    }
-
-    &:not(.active) {
-      @apply pt-4 border-blue border-t-2 border-b-2 text-black;
-
-      a {
-        svg {
-          @apply text-black fill-current;
-        }
-      }
-    }
-
-    .project__active {
-      text-align: right;
-    }
-
-    .project__info {
-      @apply grid pt-8 pb-8;
-
-      grid-template-columns: 25% 66% 10%;
-
-      h4 {
-        @apply self-center;
-      }
-
-      @screen lg {
-        @apply justify-around;
-      }
-
-      a {
-        @apply text-right;
-      }
-    }
-
-    .info__category {
-      @apply flex flex-row self-center pt-2 pb-2;
-
-      img {
-        @apply self-center mr-2 w-1/2;
-
-        @screen lg {
-          @apply w-1/4;
-        }
-      }
-
-      h4 {
-        display: none;
-
-        @screen lg {
-          display: inline-block;
-        }
-      }
-    }
-
-    .info__title {
-      @apply flex self-center;
-
-      h3 {
-        @screen lg {
-          @apply w-4/5 ml-10 mr-10 pl-10;
-        }
-      }
-    }
-  }
-}
-
 .wrapper--team {
   @screen lg {
     @apply pl-24 pr-24 pb-32 pt-2;
@@ -210,6 +132,10 @@
 
     .team-member {
       @apply p-8 border-grey-light border-t-2 border-b-2;
+
+      a {
+        @apply text-black;
+      }
 
       .team-member__img {
         @apply relative;
@@ -335,11 +261,15 @@
 .wrapper--opportunities {
   @apply grid grid-columns-1 pb-32 pt-2;
 
-  .opportunities__info {
-    @apply flex flex-col self-start -ml-28 bg-white p-8 border-blue border-2 mt-8;
+  .feature--small {
+    @apply flex flex-col self-center -ml-28 bg-white p-8 border-blue border-2 mt-8;
 
     h3.title {
       @apply mb-4;
+    }
+
+    strong {
+      @apply text-blue;
     }
   }
 
