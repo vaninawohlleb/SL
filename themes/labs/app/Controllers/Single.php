@@ -6,7 +6,7 @@ use Sober\Controller\Controller;
 
 class Single extends Controller {
 
-  use Partials\PrimaryCategory;
+  use Partials\Category;
   
   // Global
   protected $acf = true;

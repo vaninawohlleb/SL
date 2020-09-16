@@ -1,4 +1,4 @@
-<li class="project {{ $project->active === yes ? 'active' : null }}">
+<li data-category="{{ $project->category_id }}" class="project {{ $project->active === yes ? 'active' : null }}">
   @if($project->active === 'yes')
     <p class="project__active">active project</p>
   @endif

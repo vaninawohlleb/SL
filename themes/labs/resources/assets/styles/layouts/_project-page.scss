@@ -29,13 +29,19 @@
 .project--extra {
   list-style-type: none;
 
-  @apply flex flex-col self-center -ml-28 -mt-10 bg-white pt-8 pb-8 pl-8 pr-8 border-blue border-2;
+  @apply flex flex-col self-center -ml-28 bg-white pt-10 pb-10 pl-12 pr-12 border-blue border-2;
 
   h3 {
     @apply mb-2;
   }
 
   .findings {
-    @apply mt-1 mb-1;
+    @apply mt-2 mb-2;
+  }
+}
+
+.wrapper--projects {
+  .underline {
+    @apply pl-24 pr-24 pt-2 pb-2;
   }
 }

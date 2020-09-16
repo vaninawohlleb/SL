@@ -42,8 +42,22 @@
       @endforeach
     </ul>
   </div>
+  
+  <!-- <div class="wrapper--projects">
+    <div class="select--categories">
+      <select class="categories">
+          @foreach($categories as $category)
+            @if($category->term_id !== 1)
+              @if($category->term_id == ::get('category'))
+              <option selected="selected" value="{{ $category->term_id }}">{{ $category->name }}</option>
+              @else
+              <option value="{{ $category->term_id }}">{{ $category->name }}</option>
+            @endif
+          @endforeach
+      </select>
+    </div> -->
 
-  <div class="wrapper--projects">
+    {{ FrontPage::projects_filtered('4') }}
     <ul class="projects">
       @foreach($projects as $project)
         @include('partials.project-in-list')
