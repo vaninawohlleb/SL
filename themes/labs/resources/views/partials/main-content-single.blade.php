@@ -1,7 +1,9 @@
 <div class="wrapper--project">
-  <div class="project__main">
+  <div class="project__main feature">
     <hgroup>
-      <p>{{ $primary_category }}</p>
+      <a href="{{ $primary_category_link }}">
+        <p>{{ $primary_category->name }}</p>
+      </a>
       <h2 class="entry-title">{!! get_the_title() !!}</h2>
       <!-- @include('partials/entry-meta') -->
     </hgroup>

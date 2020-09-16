@@ -2,6 +2,7 @@
   @include('partials.main-content-single')
 
    <div class="wrapper--projects">
+    <h4 class="underline">Related Projects</h4>
     <ul class="projects">
       @foreach ($related_projects as $project)
         @include('partials.project-in-list')

@@ -13,7 +13,8 @@ trait RecentProjects {
         'title' => get_the_title($project),
         'category_name' => get_the_category($project->ID)[0]->name,
         'url' => get_permalink($project),
-        'active' => get_field('is_this_project_active', $project->ID)
+        'active' => get_field('is_this_project_active', $project->ID),
+        'category_url' => get_category_link(get_the_category($project->ID)[0]),
       ];
     });
   }

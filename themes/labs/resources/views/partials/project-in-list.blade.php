@@ -9,7 +9,11 @@
       @elseif($project->active === 'yes')
         <img src="{{ $project->inverted_image_url }}" />
       @endif
-      <h4>{{ $project->category_name }}</h4>
+
+      <a href="{{ $project->category_url }}">
+        <h4>{{ $project->category_name }}</h4>
+      </a>
+      
     </div>
     <div class="info__title">
       <h3>{{ $project->title }}</h3>
