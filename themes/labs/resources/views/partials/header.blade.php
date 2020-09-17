@@ -3,7 +3,11 @@
     <nav class="nav-primary">
       <div class="logo">
         <a href="{{ get_site_url() }}">
-          <img src="@asset('images/sl-logo.png')" />
+          @if(is_home() || is_single())
+            <img src="@asset('images/logo-white.png')" />
+          @else
+            <img src="@asset('images/logo-black.png')" />
+          @endif
         </a>
       </div>
       @if (has_nav_menu('primary_navigation'))

@@ -4,13 +4,19 @@
     </div>
     <div class="team-member__info">
       <h6>{{ $member->title }}</h6>
-      <p>Title: {{ $member->business_title }}</p>
-      <p>Email: {{ $member->email }}</p>
+      <p class="team-member__meta">
+        <img src="@asset('images/business-title.svg')" />
+        {{ $member->business_title }}
+      </p>
+      <p class="team-member__meta">
+        <img src="@asset('images/email.svg')" />
+        {{ $member->email }}
+      </p>
     </div>
     @if(!is_home())
-      <p class="team-member__bio">
-        {!! $member->bio !!}
-      </p>
+      <div class="team-member__bio">
+        {!! $member->content !!}
+      </div>
     @endif
   </li>
   

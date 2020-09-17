@@ -10,6 +10,10 @@
       .team-member__bio {
         @apply mt-2 mb-2;
       }
+
+      .team-member__meta {
+        @apply flex flex-col justify-center;
+      }
     }
   }
 }

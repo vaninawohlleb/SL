@@ -15,7 +15,7 @@ export default {
       mouseDrag: true,
       controls: false,
       nav: true,
-      navContainer: '.nav',
+      navContainer: '.nav-slider',
       autoPlayText: '',
     });
 

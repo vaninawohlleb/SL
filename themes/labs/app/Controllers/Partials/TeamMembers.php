@@ -14,6 +14,7 @@ trait TeamMembers {
         'image_url' => get_the_post_thumbnail_url($member),
         'email' => get_field('email', $member->ID),
         'bio' => get_field('bio', $member->ID),
+        'content' => get_post_field('post_content', $member->ID),
         'business_title' => get_field('business_title', $member->ID),
         'url' => get_permalink($member),
       ];

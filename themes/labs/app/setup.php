@@ -139,9 +139,6 @@ add_action('after_setup_theme', function () {
     });
 });
 
-// function create_team_taxonomy() {
-    
-// }
 
 add_action('after_setup_theme', function() {
     $labels = array (
@@ -172,7 +169,9 @@ add_action('after_setup_theme', function() {
         'rewrite' => array( 'slug' => 'teams' ),
     );
 
-    register_taxonomy( 'teams', 'team-member', $args );
+    register_taxonomy( 'teams', 'team_member', $args );
 });
+
+
 
 

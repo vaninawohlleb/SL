@@ -67,7 +67,9 @@ a {
 }
 
 .feature {
-  @apply bg-blue text-white p-24 pt-32;
+  @apply bg-blue text-white p-24;
+
+  padding-top: 9rem;
 
   h2,
   h3,
@@ -87,7 +89,7 @@ a {
     @apply pl-24 pb-4 pr-24;
 
     &.active {
-      @apply bg-blue text-white pt-0;
+      @apply bg-blue text-white pt-0 border-white border-t-2 border-b-2;
 
       h4 {
         @apply text-blue-light;
@@ -104,8 +106,10 @@ a {
       @apply pt-4 border-blue border-t-2 border-b-2 text-black;
 
       a {
+        @apply text-black;
+
         svg {
-          @apply text-black fill-current;
+          @apply text-blue fill-current;
         }
       }
     }
@@ -121,6 +125,10 @@ a {
 
       a {
         @apply self-center;
+
+        &.arrow {
+          text-align: end;
+        }
       }
 
       @screen lg {
@@ -160,7 +168,26 @@ a {
   }
 }
 
-.main-wrap {
-  margin-top: -7vh;
-}
+body {
+  &.home,
+  &.single {
+    .main-wrap {
+      margin-top: -7vh;
+    }
 
+    .banner {
+      @apply absolute;
+
+      top: 0;
+      z-index: 1;
+
+      #menu-main-menu {
+        li {
+          a {
+            @apply text-white;
+          }
+        }
+      }
+    }
+  }
+}

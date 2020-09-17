@@ -22,7 +22,7 @@
           @endif
         @endforeach
       </ul>
-      <div class="nav">
+      <div class="nav-slider">
         @foreach($projects as $project)
           @if($project->active === 'yes')
             <span class="dot">&#8226</span>
