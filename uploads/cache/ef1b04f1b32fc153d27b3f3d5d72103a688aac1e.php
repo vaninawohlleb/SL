@@ -9,7 +9,7 @@
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
     <div class="wrapper--feature-slider">
-      <h4 class="underline">Active Projects</h4>
+      <h4 class="underline">Active Research</h4>
       <ul class="slider-projects">
         <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
           <?php if($project->active === 'yes'): ?>
@@ -42,6 +42,12 @@
   </div>
 
   <div class="wrapper--projects">
+    <a href="/" class="link-index">
+      <h4 class="link-index__text">
+        Research
+      </h4>
+      <img src="<?= App\asset_path('images/arrow-right-tiny.svg'); ?>" />
+    </a>
     <ul class="projects">
       <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <?php echo $__env->make('partials.project-in-list', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
@@ -53,13 +59,30 @@
   </div>
 
   <div class="wrapper--team">
-    <h4 class="underline">Our Team</h4>
+    <a href="/" class="link-index">
+      <h4 class="link-index__text">People</h4>
+      <img src="<?= App\asset_path('images/arrow-right-tiny.svg'); ?>" />
+    </a>
     <ul class="team">
       <?php $__currentLoopData = $team; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $member): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <?php echo $__env->make('partials.member-in-list', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         <?php if($loop->index == 3): ?>
           <?php break; ?>
         <?php endif; ?>
+      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    </ul>
+  </div>
+
+  <div class="wrapper--products-sl">
+    <div class="products-sl__heading">
+      <a href="/" class="link-index">
+        <h4 class="link-index__text">Products</h4>
+      <img src="<?= App\asset_path('images/arrow-right-tiny.svg'); ?>" />
+    </a>
+    </div>
+    <ul class="products">
+      <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <?php echo $__env->make('partials.product-in-slider', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </ul>
   </div>
@@ -75,17 +98,6 @@
         <?php echo $__env->make('partials.feature', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
       <?php endif; ?>
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-  </div>
-
-  <div class="wrapper--products-sl">
-    <div class="products-sl__heading">
-      <h4 class="underline">Products We Built</h4>
-    </div>
-    <ul class="products">
-      <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-        <?php echo $__env->make('partials.product-in-slider', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-    </ul>
   </div>
     
   <?php echo get_the_posts_navigation(); ?>

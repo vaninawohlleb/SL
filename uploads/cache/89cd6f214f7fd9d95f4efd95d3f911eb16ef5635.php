@@ -1,7 +1,9 @@
 <div class="wrapper--project">
-  <div class="project__main">
+  <div class="project__main feature">
     <hgroup>
-      <p><?php echo e($primary_category); ?></p>
+      <a href="<?php echo e($primary_category_link); ?>">
+        <p><?php echo e($primary_category->name); ?></p>
+      </a>
       <h2 class="entry-title"><?php echo get_the_title(); ?></h2>
       <!-- <?php echo $__env->make('partials/entry-meta', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> -->
     </hgroup>

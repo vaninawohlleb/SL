@@ -3,11 +3,7 @@
     <nav class="nav-primary">
       <div class="logo">
         <a href="<?php echo e(get_site_url()); ?>">
-          <?php if(is_home() || is_single()): ?>
-            <img src="<?= App\asset_path('images/logo-white.png'); ?>" />
-          <?php else: ?>
-            <img src="<?= App\asset_path('images/logo-black.png'); ?>" />
-          <?php endif; ?>
+          <img src="<?= App\asset_path('images/logo-white.png'); ?>" />
         </a>
       </div>
       <?php if(has_nav_menu('primary_navigation')): ?>
