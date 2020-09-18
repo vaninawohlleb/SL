@@ -6,21 +6,56 @@
       @apply w-16 mr-6;
     }
 
-    #menu-main-menu {
-      list-style-type: none;
+    .menu-main-menu-container {
+      @apply flex;
 
-      @apply pl-0 text-blue flex flex-row;
+      align-items: center;
 
-      li {
-        a {
-          @apply text-blue inline-block px-4 py-2 border-none;
+      #menu-main-menu {
+        @apply relative flex;
+
+        list-style-type: none;
+
+        li {
+          @apply mr-4;
+
+          a {
+            @apply text-white text-base font-bold uppercase;
+
+            &:hover {
+              @apply text-blue-light;
+            }
+          }
+        }
+
+        .sub-menu {
+          @apply p-2 absolute bg-blue mt-4;
+
+          opacity: 0;
+          list-style-type: none;
+
+          li {
+            @apply mb-4;
+          }
+        }
+
+        .menu-item-has-children {
+          // @apply w-1/5;
 
           &:hover {
-            color: darken(#525ddc, 30%);
+            .sub-menu {
+              opacity: 1;
+            }
           }
         }
       }
     }
+  }
+}
+
+body:not(.home):not(.single) {
+  nav {
+    @apply bg-blue;
   }
 }
 

@@ -11,7 +11,7 @@
     @endforeach
   
     <div class="wrapper--feature-slider">
-      <h4 class="underline">Active Projects</h4>
+      <h4 class="underline">Active Research</h4>
       <ul class="slider-projects">
         @foreach($projects as $project)
           @if($project->active === 'yes')
@@ -44,6 +44,12 @@
   </div>
 
   <div class="wrapper--projects">
+    <a href="/" class="link-index">
+      <h4 class="link-index__text">
+        Research
+      </h4>
+      <img src="@asset('images/arrow-right-tiny.svg')" />
+    </a>
     <ul class="projects">
       @foreach($projects as $project)
         @include('partials.project-in-list')
@@ -55,13 +61,30 @@
   </div>
 
   <div class="wrapper--team">
-    <h4 class="underline">Our Team</h4>
+    <a href="/" class="link-index">
+      <h4 class="link-index__text">People</h4>
+      <img src="@asset('images/arrow-right-tiny.svg')" />
+    </a>
     <ul class="team">
       @foreach ($team as $member)
         @include('partials.member-in-list')
         @if($loop->index == 3)
           @break
         @endif
+      @endforeach
+    </ul>
+  </div>
+
+  <div class="wrapper--products-sl">
+    <div class="products-sl__heading">
+      <a href="/" class="link-index">
+        <h4 class="link-index__text">Products</h4>
+      <img src="@asset('images/arrow-right-tiny.svg')" />
+    </a>
+    </div>
+    <ul class="products">
+      @foreach($products as $product)
+        @include('partials.product-in-slider')
       @endforeach
     </ul>
   </div>
@@ -77,17 +100,6 @@
         @include('partials.feature')
       @endif
     @endforeach
-  </div>
-
-  <div class="wrapper--products-sl">
-    <div class="products-sl__heading">
-      <h4 class="underline">Products We Built</h4>
-    </div>
-    <ul class="products">
-      @foreach($products as $product)
-        @include('partials.product-in-slider')
-      @endforeach
-    </ul>
   </div>
     
   {!! get_the_posts_navigation() !!}

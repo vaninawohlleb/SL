@@ -1,0 +1,122 @@
+footer {
+  @apply bg-white pl-8 pr-8 pt-8 pb-0;
+
+  a {
+    @apply text-blue;
+
+    &:hover {
+      @apply text-black;
+    }
+  }
+
+  .container {
+    @apply flex flex-row justify-between;
+
+    align-items: flex-end;
+
+    .widget_categories,
+    .widget_nav_menu {
+      ul {
+        list-style-type: none;
+
+        @apply pl-2 pr-2;
+      }
+
+      h3 {
+        display: none;
+      }
+    }
+
+    section {
+      @apply;
+
+      &.company {
+        @apply flex justify-end;
+
+        align-items: flex-end;
+
+        .logo {
+          @apply w-16;
+        }
+
+        p {
+          display: flex;
+          align-self: center;
+          text-align: right;
+        }
+      }
+    }
+
+    .search-form {
+      label {
+        @apply mb-0 mr-2;
+      }
+
+      input[type="search"] {
+        @apply border-2 border-blue mb-0;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      input[type="submit"] {
+        @apply flex bg-blue text-white;
+
+        align-self: normal;
+        text-transform: uppercase;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .donate {
+    @apply relative;
+
+    svg {
+      position: absolute;
+      z-index: 0;
+      overflow: visible;
+
+      &:first-child {
+        top: -5rem;
+      }
+
+      &:nth-child(2) {
+        top: -4rem;
+        left: 0.9rem;
+      }
+
+      &:nth-child(3) {
+        top: -5.5rem;
+        left: 0.5rem;
+      }
+
+      &:nth-child(4) {
+        top: -4.5rem;
+        left: 0.7rem;
+      }
+
+      &:nth-child(5) {
+        top: -5rem;
+        left: 1rem;
+      }
+
+      .circle {
+        fill: none;
+        stroke: #00f;
+      }
+    }
+
+    h6 {
+      @apply w-1/2 text-center;
+
+      z-index: 1;
+      margin: 0 auto;
+    }
+  }
+}
+

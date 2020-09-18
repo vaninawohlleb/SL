@@ -2,6 +2,24 @@ html {
   @apply font-sans;
 }
 
+body {
+  overflow-x: hidden;
+
+  &.home,
+  &.single {
+    .main-wrap {
+      margin-top: -7vh;
+    }
+
+    .banner {
+      @apply absolute;
+
+      top: 0;
+      z-index: 1;
+    }
+  }
+}
+
 h1 {
   @apply text-3xlm mb-4;
 
@@ -78,6 +96,10 @@ a {
   p {
     max-width: 95%;
   }
+
+  &.project__main {
+    @apply pt-32;
+  }
 }
 
 .projects {
@@ -88,38 +110,8 @@ a {
   .project {
     @apply pl-24 pb-4 pr-24;
 
-    &.active {
-      @apply bg-blue text-white pt-0 border-white border-t-2 border-b-2;
-
-      h4 {
-        @apply text-blue-light;
-      }
-
-      a {
-        svg {
-          @apply text-blue-light fill-current;
-        }
-      }
-    }
-
-    &:not(.active) {
-      @apply pt-4 border-blue border-t-2 border-b-2 text-black;
-
-      a {
-        @apply text-black;
-
-        svg {
-          @apply text-blue fill-current;
-        }
-      }
-    }
-
-    .project__active {
-      text-align: right;
-    }
-
     .project__info {
-      @apply grid pt-8 pb-8;
+      @apply grid;
 
       grid-template-columns: 25% 66% 10%;
 
@@ -134,6 +126,44 @@ a {
       @screen lg {
         @apply justify-around;
       }
+    }
+
+    &.active {
+      @apply bg-blue text-white pt-0 border-white border-t-2 border-b-2;
+
+      h4 {
+        @apply text-blue-light;
+      }
+
+      a {
+        svg {
+          @apply text-blue-light fill-current;
+        }
+      }
+
+      .project__info {
+        @apply pt-6 pb-8;
+      }
+    }
+
+    &:not(.active) {
+      @apply pt-4 border-blue border-t-2 border-b-2 text-black;
+
+      a {
+        @apply text-black;
+
+        svg {
+          @apply text-blue fill-current;
+        }
+      }
+
+      .project__info {
+        @apply pt-8 pb-8;
+      }
+    }
+
+    .project__active {
+      @apply text-right pt-2;
     }
 
     .info__category {
@@ -168,26 +198,11 @@ a {
   }
 }
 
-body {
-  &.home,
-  &.single {
-    .main-wrap {
-      margin-top: -7vh;
-    }
+.link-index {
+  @apply flex flex-row justify-end text-right pb-4;
 
-    .banner {
-      @apply absolute;
-
-      top: 0;
-      z-index: 1;
-
-      #menu-main-menu {
-        li {
-          a {
-            @apply text-white;
-          }
-        }
-      }
-    }
+  .link-index__text {
+    @apply mr-4;
   }
 }
+
