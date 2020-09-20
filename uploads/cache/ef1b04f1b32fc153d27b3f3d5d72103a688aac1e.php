@@ -37,6 +37,9 @@
     <ul class="processes">
       <?php $__currentLoopData = $processes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $process): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <?php echo $__env->make('partials.process-in-list', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <?php if($loop->index == 5): ?>
+          <?php break; ?>
+        <?php endif; ?>
       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </ul>
   </div>
@@ -83,6 +86,9 @@
     <ul class="products">
       <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <?php echo $__env->make('partials.product-in-slider', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <?php if($loop->index == 3): ?>
+          <?php break; ?>
+        <?php endif; ?>
       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </ul>
   </div>
