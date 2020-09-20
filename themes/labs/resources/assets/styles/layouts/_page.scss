@@ -1,0 +1,9 @@
+.page--content {
+  @apply max-w-lg;
+
+  margin: 0 auto;
+
+  h2 {
+    @apply text-blue mb-4;
+  }
+}

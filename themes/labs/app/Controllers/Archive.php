@@ -8,4 +8,5 @@ class Archive extends Controller
 {
   use Partials\RecentProjects;
   use Partials\TeamMembers;
+  use Partials\RecentProducts;
 }

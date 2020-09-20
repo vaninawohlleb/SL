@@ -2,13 +2,19 @@
 
 @section('content')
   @include('partials.page-header')
-  <div class="wrapper--projects category">
-    <h3 class="underline">@php single_cat_title() @endphp</h3>
-    <ul class="projects">
-      @foreach($category_projects as $project)
-        @include('partials.project-in-list')
-      @endforeach
-    </ul>
+  <div class="wrapper--singles category">
+    <hgroup class="category__info">
+      <h3 class="underline">{{ $category_object->category_name }}</h3>
+      <p>{!! $category_object->category_description !!}</p>
+    </hgroup>
+    
+    <div class="projects--list">
+      <ul class="projects">
+        @foreach($category_projects as $project)
+          @include('partials.project-in-list')
+        @endforeach
+      </ul>
+    </div>
   </div>
   
 @endsection

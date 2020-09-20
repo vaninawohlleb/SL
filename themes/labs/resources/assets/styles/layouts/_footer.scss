@@ -1,5 +1,5 @@
 footer {
-  @apply bg-white pl-8 pr-8 pt-8 pb-0;
+  @apply bg-white pl-8 pr-8 pt-8 pb-0 mt-20;
 
   a {
     @apply text-blue;
@@ -28,7 +28,7 @@ footer {
     }
 
     section {
-      @apply;
+      max-width: 20vw;
 
       &.company {
         @apply flex justify-end;
@@ -36,7 +36,7 @@ footer {
         align-items: flex-end;
 
         .logo {
-          @apply w-16;
+          @apply w-10;
         }
 
         p {
@@ -86,23 +86,23 @@ footer {
       }
 
       &:nth-child(2) {
-        top: -4rem;
-        left: 0.9rem;
+        top: -5rem;
+        left: -1rem;
       }
 
       &:nth-child(3) {
-        top: -5.5rem;
-        left: 0.5rem;
+        top: -6.5rem;
+        left: -1.9rem;
       }
 
       &:nth-child(4) {
-        top: -4.5rem;
-        left: 0.7rem;
+        top: -5.5rem;
+        left: -1.7rem;
       }
 
       &:nth-child(5) {
-        top: -5rem;
-        left: 1rem;
+        top: -6rem;
+        left: -0.5rem;
       }
 
       .circle {
@@ -112,7 +112,7 @@ footer {
     }
 
     h6 {
-      @apply w-1/2 text-center;
+      @apply w-1/2 text-left;
 
       z-index: 1;
       margin: 0 auto;

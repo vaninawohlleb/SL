@@ -28,4 +28,13 @@ class Category extends Controller {
       ];
     });
   }
+
+  public function category_object() {
+    $category = get_queried_object();
+
+    return(object) [
+      'category_name' => get_cat_name($category->cat_ID),
+      'category_description' => category_description()
+    ];
+  }
 }

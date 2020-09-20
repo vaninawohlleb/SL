@@ -1,2 +1,7 @@
-@php the_content() @endphp
-{!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
+<div class="page--content">
+  <h2>{!! get_the_title() !!}</h2>
+  <div>
+    @php the_content() @endphp
+  </div>
+</div>
+

@@ -1,5 +1,15 @@
 .category {
+  .category__info {
+    @apply flex flex-row pl-24 pr-24 pt-8 pb-8;
+
+    align-items: flex-start;
+  }
+
   .underline {
-    @apply text-blue;
+    @apply text-blue p-0 mr-24 w-4/5;
+  }
+
+  p {
+    @apply mt-2;
   }
 }

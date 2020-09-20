@@ -39,6 +39,9 @@
     <ul class="processes">
       @foreach($processes as $process)
         @include('partials.process-in-list')
+        @if($loop->index == 5)
+          @break
+        @endif
       @endforeach
     </ul>
   </div>
@@ -85,6 +88,9 @@
     <ul class="products">
       @foreach($products as $product)
         @include('partials.product-in-slider')
+        @if($loop->index == 3)
+          @break
+        @endif
       @endforeach
     </ul>
   </div>

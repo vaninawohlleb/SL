@@ -1,24 +1,14 @@
-.wrapper--project {
+.wrapper--single {
   @apply grid pb-24;
 
   grid-template-columns: 70% 30%;
 }
 
-.project__main {
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  a,
-  p {
-    @apply pb-2;
-  }
-
+.project--header {
   .read-more {
     @apply text-white;
 
-    border-bottom: 1px solid white;
+    border-bottom: 2px solid white;
   }
 }
 
@@ -36,7 +26,7 @@
   }
 }
 
-.wrapper--projects {
+.wrapper--singles {
   .underline {
     @apply pl-24 pr-24 pt-2 pb-2;
   }

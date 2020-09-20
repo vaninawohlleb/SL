@@ -160,42 +160,6 @@
   }
 }
 
-.wrapper--products-sl {
-  .products-sl__heading {
-    @screen lg {
-      @apply pl-24 pr-24;
-    }
-  }
-
-  .products {
-    @apply grid grid-columns-3 grid-gap-9 pl-0 pb-32 pt-2;
-
-    list-style-type: none;
-
-    .product {
-      @apply border-grey-light border-t-2 border-b-2 p-8;
-
-      min-height: 25vh;
-    }
-
-    .product:nth-child(even) {
-      @apply border-l-2 border-r-2;
-    }
-
-    .product__img {
-      @apply w-1/3;
-    }
-
-    .product__info {
-      @apply mt-4;
-
-      .title {
-        @apply mb-4;
-      }
-    }
-  }
-}
-
 .wrapper--feature-slider {
   @apply flex flex-col self-end -ml-28;
 
@@ -337,7 +301,7 @@
   }
 }
 
-.wrapper--projects {
+.s {
   .link-index {
     @apply pl-24 pr-24;
   }

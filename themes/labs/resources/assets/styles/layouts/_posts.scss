@@ -1,0 +1,11 @@
+.post {
+  .feature--img {
+    @apply flex self-center -ml-28 mb-10 bg-white pt-8 pb-8 pl-8 pr-8 border-blue border-2;
+  }
+
+  .post--content {
+    @apply max-w-lg;
+
+    margin: 0 auto;
+  }
+}

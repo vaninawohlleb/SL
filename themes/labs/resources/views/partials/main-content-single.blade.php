@@ -1,5 +1,5 @@
-<div class="wrapper--project">
-  <div class="project__main feature">
+<div class="wrapper--single">
+  <div class="project--header feature">
     <hgroup>
       <a href="{{ $primary_category_link }}">
         <p>{{ $primary_category->name }}</p>
