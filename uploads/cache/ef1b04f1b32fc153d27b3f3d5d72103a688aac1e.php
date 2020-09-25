@@ -20,7 +20,7 @@
           <?php endif; ?>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
       </ul>
-      <div class="nav">
+      <div class="nav-slider">
         <?php $__currentLoopData = $projects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $project): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
           <?php if($project->active === 'yes'): ?>
             <span class="dot">&#8226</span>

@@ -1,0 +1,78 @@
+/*
+Theme Name: Salient Child Theme
+Description: This is a custom child theme for Salient
+Theme URI:   https://themeforest.net/item/salient-responsive-multipurpose-theme/4363266
+Author: ThemeNectar
+Author URI:  https://themeforest.net/user/themenectar
+Template: salient
+Version: 1.0
+*/
+
+@media only screen and (min-width: 1000px) {
+    .container {
+    padding: 0 !important;
+    /* background: red !important; */
+  }
+}
+
+.container > .span_12 .wpb_column:not(.child_column) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.slider-active-projects {
+  display: flex;
+  align-self: flex-end;
+  max-height: 45vh;
+}
+
+.slider-active-projects .vc_column-inner {
+  width: 100%;
+}
+
+.slider-active-projects h3, 
+.slider-active-projects p,
+.home-team .team-member p {
+  color: #000;
+}
+
+.home .owl-carousel {
+  background: #fff;
+  border: 2px solid #00f;
+  margin-bottom: 20px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.nectar-icon-list {
+  justify-content: center;
+}
+
+.nectar-icon-list-item .content {
+  color: #000 !important;
+  text-align: left;
+}
+
+.nectar-icon-list-item .content h4 { 
+  color: #000;
+}
+
+body #footer-outer i, body #header-secondary-outer #social i {
+  font-size: 50px !important;
+  color: #000 !important;
+}
+
+.has-post-thumbnail img {
+  width: 100%;
+}
+
+#footer-outer .widget.widget_media_image img {
+  max-width: 20% !important;
+}
+
+
+
+
+
