@@ -7585,9 +7585,7 @@ body .vc_pie_chart {
 }
  .blog-recent[data-style="default"] .col .post-header h3{
     margin-bottom:3px;
-     letter-spacing:-0.2px;
-     font-size:16px;
-     line-height:23px
+    letter-spacing:-0.2px;
 }
 .blog-recent .col .post-header a, 
 .blog-recent .col .post-header h3 a:hover{

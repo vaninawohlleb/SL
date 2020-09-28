@@ -1439,20 +1439,16 @@ body .dark .testimonial_slider[data-style="multiple_visible"][data-color*="accen
 	.page-template-template-portfolio-php .portfolio-items .col.span_4 { 
 		background-color: #ffffff; 
 	}body, body h1, body h2, body h3, body h4, body h5, body h6, .masonry.material .masonry-blog-item .grav-wrap .text { 
-		color: #0000ff; 
+		color: #000000; 
 	}
   #sidebar h4,
   body .row .col.section-title span {
-   color: #0000ff; 
+   color: #000000; 
   }
   .single .heading-title[data-header-style="default_minimal"] .meta-category a {
-    color: #0000ff; 
-    border-color: #0000ff; 
-  }.full-width-section > .col.span_12.dark, .full-width-content > .col.span_12.dark {
-			color: #0000ff;	
-		}
-		.full-width-section  > .col.span_12.dark .portfolio-items .col h3,
-		.full-width-section  > .col.span_12.dark .portfolio-items[data-ps="6"] .work-meta h4 { color: #fff; } body #header-outer, 
+    color: #000000; 
+    border-color: #000000; 
+  }body #header-outer, 
 		body #search-outer, 
 		body.ascend #search-outer, 
     body[data-header-format="left-header"].ascend #search-outer,
@@ -1567,34 +1563,6 @@ body .dark .testimonial_slider[data-style="multiple_visible"][data-color*="accen
 		}body[data-header-format="left-header"] #header-outer .cart-outer .cart-notification:after { 
 			border-color: transparent transparent #0000ff transparent; 
 		} 
-		#top .sf-menu li ul li a:hover, 
-		body #top nav .sf-menu ul .sfHover > a, 
-		#top .sf-menu li ul .current-menu-item > a, 
-		#top .sf-menu li ul .current-menu-ancestor > a, 
-		#top nav > ul > .megamenu > ul ul li a:hover, 
-		#top nav > ul > .megamenu > ul ul li a:focus, 
-		#top nav > ul > .megamenu > ul ul .current-menu-item > a, 
-		#header-secondary-outer ul ul li a:hover, 
-		#header-secondary-outer ul ul li a:focus, 
-		#header-secondary-outer ul > li:not(.megamenu) ul a:hover,
-		body #header-secondary-outer .sf-menu ul .sfHover > a, 
-		#search-outer .ui-widget-content li:hover, 
-		.ui-state-hover, 
-		.ui-widget-content .ui-state-hover, 
-		.ui-widget-header .ui-state-hover, 
-		.ui-state-focus, 
-		.ui-widget-content .ui-state-focus, 
-		.ui-widget-header .ui-state-focus, 
-		#header-outer #top nav > ul > li:not(.megamenu) ul a:hover, 
-		#header-outer #top nav > ul > li:not(.megamenu) .sfHover > a, 
-		#header-outer:not([data-format="left-header"]) #top nav > ul > li:not(.megamenu) .sfHover > a, 
-		#top nav > ul > .megamenu > ul ul .sfHover > a,
-		#header-outer:not([data-format="left-header"]) #top nav > ul > li:not(.megamenu) ul a:hover, 
-		body:not([data-header-format="left-header"]) #top nav > ul > .megamenu > ul ul .current-menu-item > a, 
-		#header-outer:not([data-format="left-header"]) #top nav > ul > li:not(.megamenu) ul .current-menu-item > a, 
-		#header-outer:not([data-format="left-header"]) #top nav > ul > li:not(.megamenu) ul .current-menu-ancestor > a { 
-			background-color:#0000ff!important; 
-		}
 		#search-outer .ui-widget-content li a, 
 		#search-outer .ui-widget-content i, 
 		#top .sf-menu li ul li a, 
@@ -1695,7 +1663,7 @@ body .dark .testimonial_slider[data-style="multiple_visible"][data-color*="accen
 		}#header-secondary-outer, 
     #header-outer #header-secondary-outer, 
     #header-outer #mobile-menu .secondary-header-text { 
-			background-color:#F8F8F8; 
+			background-color:#0000ff; 
 		}#header-secondary-outer nav > ul > li > a, 
 		#header-secondary-outer .nectar-center-text, 
 		#header-secondary-outer .nectar-center-text a, 
@@ -1703,7 +1671,7 @@ body .dark .testimonial_slider[data-style="multiple_visible"][data-color*="accen
 		#header-secondary-outer #social li a i,
 		#header-secondary-outer[data-lhe="animated_underline"] nav > .sf-menu >li:hover >a,
     #header-outer #mobile-menu .secondary-header-text p { 
-			color:#666666; 
+			color:#ffffff; 
 		}
 		#header-secondary-outer #social li a:hover i, 
 		#header-secondary-outer .nectar-center-text a:hover, 
@@ -1716,7 +1684,7 @@ body .dark .testimonial_slider[data-style="multiple_visible"][data-color*="accen
 		#header-secondary-outer nav > ul > .current-menu-ancestor > a, 
 		#header-secondary-outer nav > ul > .current-menu-ancestor > a .sf-sub-indicator i, 
 		#header-secondary-outer nav > ul > li:hover > a .sf-sub-indicator i { 
-			color:#222222!important; 
+			color:#beddff!important; 
 		}
 			 #search-outer .ui-widget-content, 
 			 body:not([data-header-format="left-header"]) #top .sf-menu li ul, 
@@ -2485,8 +2453,12 @@ body .dark .testimonial_slider[data-style="multiple_visible"][data-color*="accen
    #header-outer[data-format="centered-menu"] .logo-spacing[data-using-image="false"],
    #header-outer[data-format="centered-logo-between-menu"] .logo-spacing[data-using-image="false"] {font-family: Helvetica, sans-serif;  }#top nav > ul > li > a, .span_3 .pull-left-wrap > ul > li > a, body.material #search-outer #search input[type="text"], #top nav ul .slide-out-widget-area-toggle a i.label,
     #top .span_9 > .slide-out-widget-area-toggle a.using-label .label, #header-secondary-outer .nectar-center-text, #slide-out-widget-area .secondary-header-text, 
-    #header-outer #mobile-menu ul li a, #header-outer #mobile-menu .secondary-header-text {font-family: Helvetica, sans-serif;  }#top .sf-menu li ul li a, #header-secondary-outer nav > ul > li > a, 
-		#header-secondary-outer ul ul li a, #header-outer .widget_shopping_cart .cart_list a {font-family: Helvetica, sans-serif;  }		
+    #header-outer #mobile-menu ul li a, #header-outer #mobile-menu .secondary-header-text {font-family: Helvetica, sans-serif; font-size:16px; line-height:22px; font-weight:400;  }#top nav > ul > li[class*="button_solid_color"] > a:before, #header-outer.transparent #top nav > ul > li[class*="button_solid_color"] > a:before, #header-outer #top .slide-out-widget-area-toggle[data-custom-color="true"] a:before { 
+		    		height: 27px; 
+		    	}#top nav > ul > li[class*="button_bordered"] > a:before, #header-outer.transparent #top nav > ul > li[class*="button_bordered"] > a:before { 
+		    		height: 37px; 
+		    	}.material .sf-menu > li > a > .sf-sub-indicator [class^="icon-"] { font-size: 18px; }#top .sf-menu li ul li a, #header-secondary-outer nav > ul > li > a, 
+		#header-secondary-outer ul ul li a, #header-outer .widget_shopping_cart .cart_list a {font-family: Helvetica, sans-serif; font-size:16px; line-height:22px; font-weight:400;  }		
 		
 		@media only screen 
 		and (min-width : 1px) and (max-width : 999px) 
