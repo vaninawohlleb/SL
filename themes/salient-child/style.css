@@ -218,5 +218,65 @@ body #footer-outer i, body #header-secondary-outer #social i {
   width: 95%;
 }
 
+body.single-post .container-wrap.no-sidebar .wpb_row.full-width-content {
+  padding-top: 0 !important;
+}
 
+.post-area.standard-minimal .post .post-header {
+  display: flex !important;
+  margin-bottom: 0 !important;
+  align-items: center;
+}
+
+.post-area.standard-minimal .post-content {
+  padding-left: 0 !important;
+}
+
+.post-area.standard-minimal .post-content .image,
+.post-area.standard-minimal .post-content .title {
+  margin-right: 2rem;
+}
+
+.post-area.standard-minimal .post-content .excerpt {
+  width: 50vw;
+  color: #fff;
+}
+
+.category .type-post.format-standard.tag-active {
+  background: #00f;
+}
+
+.category .type-post.format-standard.tag-active .title > a {
+  color: #fff !important;
+}
+
+.category .page-header-no-bg {
+  padding: 2% 8% !important
+}
+
+.category .post-area.standard-minimal.full-width-content {
+  width: 100% !important;
+  margin-left: 0!important;
+}
+
+.category .post-area.standard-minimal.full-width-content .post .content-inner {
+  margin-bottom: 0 !important;
+}
+
+.category .post-area.standard-minimal.full-width-content .post {
+  padding: 2% 0 !important;
+  border-top: 2px solid #00f;
+  border-bottom: 2px solid #00f;
+  margin-bottom: 4px;
+}
+
+.post-area.standard-minimal.full-width-content .posts-container >article:last-child {
+  border-top: 2px solid #00f !important;
+  border-bottom: 2px solid #00f !important;
+  margin-bottom: 4px;
+}
+
+.post-area.standard-minimal .post .post-header, .post-area.standard-minimal .post .content-inner .post-featured-img img {
+  margin-bottom: 0 !important;
+}
 

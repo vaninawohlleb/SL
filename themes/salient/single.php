@@ -37,7 +37,6 @@ if ( have_posts() ) :
 	while ( have_posts() ) :
 		
 		the_post();
-		nectar_page_header( $post->ID );
 
 endwhile;
 endif;
@@ -46,7 +45,9 @@ endif;
 // Post header fullscreen style when no image is supplied.
 if ( true === $fullscreen_header ) {
 	get_template_part( 'includes/partials/single-post/post-header-no-img-fullscreen' );
-} ?>
+} 
+
+?>
 
 
 <div class="<?php echo esc_attr( $container_wrap_class ); if ( $blog_type === 'std-blog-fullwidth' || $hide_sidebar === '1' ) { echo ' no-sidebar'; } ?>" data-midnight="dark" data-remove-post-date="<?php echo esc_attr( $remove_single_post_date ); ?>" data-remove-post-author="<?php echo esc_attr( $remove_single_post_author ); ?>" data-remove-post-comment-number="<?php echo esc_attr( $remove_single_post_comment_number ); ?>">
